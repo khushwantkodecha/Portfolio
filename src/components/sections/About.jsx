@@ -3,6 +3,20 @@ import Section from '../ui/Section';
 import { motion } from 'framer-motion';
 
 const About = () => {
+
+    const getExperience = () => {
+        const start = new Date("2019-07-01");
+        const now = new Date();
+
+        let years = now.getFullYear() - start.getFullYear();
+        let months = now.getMonth() - start.getMonth();
+
+        if (months < 0 || (months === 0 && now.getDate() < start.getDate())) {
+            years--;
+        }
+
+        return `${years}+`;
+    };
     return (
         <Section id="about" className="bg-white dark:bg-zinc-900/50">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -17,14 +31,11 @@ const About = () => {
                     </h2>
                     <div className="space-y-4 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed">
                         <p>
-                            I am a results-driven Senior Full Stack Developer with over 6 years of experience building high-performance web applications. My journey started with a curiosity for how things work on the web, which evolved into a passion for creating seamless user experiences.
-                        </p>
+                            I’m a Senior Full Stack Developer with 6+ years of experience delivering scalable, high-performance web applications. What started as curiosity about the web has grown into a deep passion for building intuitive and reliable digital products.                        </p>
                         <p>
-                            I specialize in the MERN stack (MongoDB, Express.js, React, Node.js) but I'm always exploring new technologies to solve problems more efficiently. I pride myself on writing clean, maintainable code and architecting scalable solutions.
-                        </p>
+                            With strong expertise in the MERN stack, I focus on clean architecture, maintainable codebases, and performance-driven solutions. I’m always learning and experimenting with new tools to build better, faster, and more efficient systems.                        </p>
                         <p>
-                            When I'm not coding, you can find me contributing to open-source projects, writing technical articles, or exploring the latest trends in UI/UX design.
-                        </p>
+                            Outside of work, I actively contribute to open-source projects, write technical content, and explore modern UI/UX patterns.                        </p>
                     </div>
                 </motion.div>
 
@@ -36,9 +47,9 @@ const About = () => {
                     className="grid grid-cols-2 gap-4"
                 >
                     {[
-                        { label: "Years Experience", value: "6+" },
+                        { label: "Years Experience", value: getExperience() },
                         { label: "Projects Completed", value: "50+" },
-                        { label: "Companies Worked", value: "3" },
+                        { label: "Companies Worked", value: "4" },
                         { label: "Happy Clients", value: "100%" }
                     ].map((stat, index) => (
                         <div key={index} className="p-6 bg-zinc-50 dark:bg-zinc-800/50 rounded-2xl border border-zinc-100 dark:border-zinc-800 text-center hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">

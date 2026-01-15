@@ -4,12 +4,22 @@ export const skills = [
     {
         category: "Frontend",
         icon: Layout,
-        items: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Redux Toolkit", "Framer Motion", "Vue.js"]
+        items: ["React", "JavaScript (ES6+)", "TypeScript", "Next.js", "Tailwind CSS", "SCSS", "Redux Toolkit", "React Query", "Framer Motion", "Jest", "Vue.js"]
     },
     {
         category: "Backend",
         icon: Server,
-        items: ["Node.js", "Express", "NestJS", "GraphQL", "Socket.io", "Python", "Go"]
+        items: [
+            "Node.js",
+            "Express",
+            "GraphQL",
+            "Python",
+            "REST APIs",
+            "JWT",
+            "MongoDB",
+            "Redis"
+        ]
+
     },
     {
         category: "Database",
@@ -19,6 +29,15 @@ export const skills = [
     {
         category: "DevOps & Tools",
         icon: Settings,
-        items: ["Docker", "Kubernetes", "AWS", "CI/CD", "Git", "Jest", "Cypress"]
+        items: [
+            "Git",
+            "Vercel",
+            "Netlify",
+            "Linux",
+            "Jest",
+            "Playwright",
+            "ESLint",
+            "Prettier"
+        ]
     }
 ];

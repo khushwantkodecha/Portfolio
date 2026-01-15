@@ -1,9 +1,40 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import Button from '../ui/Button';
 
 const Hero = () => {
+    const words = [
+        "matter.",
+        "scale.",
+        "inspire.",
+        "succeed.",
+        "perform.",
+        "convert.",
+        "impact.",
+        "grow.",
+        "ship.",
+        "evolve.",
+        "innovate.",
+        "lead.",
+        "optimize.",
+        "deliver.",
+        "transform."
+    ];
+
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setIndex((prevIndex) => (prevIndex + 1) % words.length);
+        }, 2300);
+        return () => clearInterval(timer);
+    }, []);
+
+    useEffect(() => {
+        index == words.length && setIndex(0);
+    }, [index])
+
     return (
         <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
             {/* Background Gradient */}
@@ -23,12 +54,24 @@ const Hero = () => {
 
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 dark:text-white mb-6">
                         Building digital products that
-                        <span className="block text-indigo-600 dark:text-indigo-500 mt-2">matter.</span>
+                        <div className="h-20 md:h-24 overflow-hidden">
+                            <AnimatePresence mode="wait">
+                                <motion.span
+                                    key={words[index]}
+                                    initial={{ y: 50, opacity: 0 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    exit={{ y: -50, opacity: 0 }}
+                                    transition={{ duration: 0.5, ease: "easeOut" }}
+                                    className="block text-indigo-600 dark:text-indigo-500 mt-2"
+                                >
+                                    {words[index]}
+                                </motion.span>
+                            </AnimatePresence>
+                        </div>
                     </h1>
 
                     <p className="max-w-2xl mx-auto text-xl text-zinc-600 dark:text-zinc-400 mb-10 leading-relaxed">
-                        I'm a Senior Full Stack Developer specializing in the MERN stack.
-                        I build accessible, pixel-perfect, and performant web applications.
+                        Senior Full Stack Developer specializing in the MERN stack, building accessible, pixel-perfect, and high-performance web applications
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -43,9 +86,9 @@ const Hero = () => {
 
                     <div className="mt-12 flex items-center justify-center gap-6">
                         {[
-                            { icon: Github, href: "https://github.com" },
-                            { icon: Linkedin, href: "https://linkedin.com" },
-                            { icon: Mail, href: "mailto:hello@example.com" }
+                            { icon: Github, href: "https://github.com/khushwantkodecha" },
+                            { icon: Linkedin, href: "https://www.linkedin.com/in/khushwant-kodecha/" },
+                            { icon: Mail, href: "mailto:khush.kodecha@gmail.com" }
                         ].map((social, index) => (
                             <a
                                 key={index}
