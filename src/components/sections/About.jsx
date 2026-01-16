@@ -34,8 +34,6 @@ const About = () => {
                             I’m a Senior Full Stack Developer with 6+ years of experience delivering scalable, high-performance web applications. What started as curiosity about the web has grown into a deep passion for building intuitive and reliable digital products.                        </p>
                         <p>
                             With strong expertise in the MERN stack, I focus on clean architecture, maintainable codebases, and performance-driven solutions. I’m always learning and experimenting with new tools to build better, faster, and more efficient systems.                        </p>
-                        <p>
-                            Outside of work, I actively contribute to open-source projects, write technical content, and explore modern UI/UX patterns.                        </p>
                     </div>
                 </motion.div>
 

@@ -1,23 +1,30 @@
 export const experience = [
     {
         id: 1,
-        role: "Senior Full Stack Developer",
-        company: "TechFlow Solutions",
-        period: "2023 - Present",
-        description: "Leading a team of 5 developers in building a cloud-native SaaS product. Improved system performance by 40% through code optimization and caching strategies."
+        role: "Full Stack Developer",
+        company: "EY",
+        period: "2024 - Present",
+        description: "Working on enterprise-grade applications for global clients. Contributing to frontend development using React and TypeScript, backend integrations with Node.js, and ensuring performance, scalability, and code quality within cross-functional teams."
     },
     {
         id: 2,
         role: "Full Stack Developer",
-        company: "Innovate Digital",
-        period: "2020 - 2023",
-        description: "Developed and maintained multiple client-facing React applications. Implemented secure authentication and payment gateway integrations integration Stripe."
+        company: "Publicis Sapient",
+        period: "2022 - 2024",
+        description: "Delivered end-to-end features for large-scale digital transformation projects. Built complex user interfaces with React, implemented backend APIs, collaborated with UX and backend teams, and optimized application performance."
     },
     {
         id: 3,
         role: "Frontend Developer",
-        company: "Creative Web Agency",
-        period: "2018 - 2020",
-        description: "Built responsive UI components and landing pages. Collaborated with designers to ensure pixel-perfect implementation of Figma designs."
+        company: "Relyon Softech Ltd",
+        period: "2020 - 2022",
+        description: "Developed and maintained client-facing web applications using React. Built reusable UI components, integrated REST APIs, ensured responsive design, and collaborated closely with designers and backend teams."
+    },
+    {
+        id: 4,
+        role: "Frontend Developer",
+        company: "Crewfoundry",
+        period: "2019 - 2020",
+        description: "Started professional career building responsive web interfaces using HTML, CSS, JavaScript, and React. Assisted in feature development, fixed UI issues, and gained strong fundamentals in frontend best practices."
     }
 ];

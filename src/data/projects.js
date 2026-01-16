@@ -24,6 +24,6 @@ export const projects = [
         tech: ["Microservices", "Docker", "Kubernetes", "Go", "gRPC"],
         github: "https://github.com/username/project",
         demo: "https://demo.com",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80&w=800"
+        image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800"
     }
 ];
